@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import RoomList from './components/RoomList';
 import * as firebase from 'firebase';
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
 // Initialize Firebase
 var config = {
@@ -21,8 +19,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Bloc Chat React</h1>
-        <div className="room-list">
+        <div className="header">
+          <h1>Bloc Chat React</h1>
+        </div>
+        <div>
           <RoomList firebase={firebase} />
         </div>
       </div>
