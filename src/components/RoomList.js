@@ -23,6 +23,7 @@ class RoomList extends Component{
   }
 
   createRoom(e){
+    e.preventDefault();
     const newRoom = e.target.elements.newRoomName.value;
     this.roomsRef.push({
       name: newRoom
